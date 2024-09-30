@@ -1,0 +1,108 @@
+// variable
+$bg-color: rgb(250, 244, 215);
+// $pan-card-color:linear-gradient(to bottom left, rgb(151,142,240),rgb(197,147,190));
+$color: rgb(161, 71, 113);
+$p-img-width: 110px;
+$QR-img-width: 150px;
+$s-img-width: 70px;
+$padding-left: 15px;
+
+body {
+  background-color: $bg-color;
+  margin: 0;
+  padding: 0;
+}
+.pan-card-section {
+  display: flex;
+  justify-content: center;
+  padding: 10%;
+}
+.pan-card {
+  background-image: linear-gradient(to bottom left, rgb(102, 92, 188),rgb(207, 149, 200));
+  // background-color: linear-gradient(to bottom left, rgb(17, 9, 87),rgb(197,147,190));
+  // background-color: $pan-card-color;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  height: 400px;
+  width: 650px;
+  border-radius: 10px;
+
+  h1 {
+    font-size: 18px;
+    text-shadow: 2px 2px 2px color(black);
+    // color:rgb(150, 80, 103);
+  }
+  h2 {
+    font-size: 17px;
+  }
+  .first {
+    color:rgb(36, 36, 154);
+  }
+  .second{
+    font-size: 20px;
+  }
+  h3 {
+    font-size: 14px;
+    color:rgb(36, 36, 154);
+    margin: 1px;
+  }
+  h4 {
+    font-size: 16px;
+    color:black;
+    margin: 2px;
+  }
+
+  .pan-card__div1 {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    display: grid;
+    grid-template-columns: 2fr 1fr 2fr;
+    text-align: center;
+    padding-left: $padding-left;
+    img {
+      width: $s-img-width;
+      align-items: center;
+      padding-top: 10px;
+    }
+  }
+
+  .pan-card__div2 {
+    grid-column-start: 1;
+    grid-column-end: 1;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    .pan-card__inner-div2-1 {
+      padding-left: $padding-left;
+    }
+    .pan-card__inner-div2-2 {
+      text-align: center;
+      padding-left: $padding-left;
+    }
+
+    img {
+      width: $p-img-width;
+      align-items: center;
+    }
+  }
+  .pan-card__div3 {
+    grid-column-start: 2;
+    img {
+      width: $QR-img-width;
+      align-items: center;
+      padding-left: $padding-left;
+    }
+  }
+  .pan-card__div4 {
+    grid-row-start: 3;
+    grid-column-start: 1;
+    padding-left: $padding-left;
+  }
+
+  .pan-card__div5 {
+    grid-row-start: 4;
+    grid-column-start: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-left: $padding-left;
+  }
+}
